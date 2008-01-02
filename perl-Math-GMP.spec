@@ -11,6 +11,7 @@ Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{realname}-%
 Patch0:		perl-Math-GMP-2.04-x86_64.patch
 BuildRequires:  perl-devel gmp-devel
 Requires:       perl
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Math::GMP was designed to be a drop-in replacement both for
