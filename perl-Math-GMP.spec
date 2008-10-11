@@ -1,17 +1,16 @@
-%define realname Math-GMP
+%define module Math-GMP
 
 Summary:        High speed arbitrary size integer math
-Name:           perl-%{realname}
+Name:           perl-%{module}
 Version:        2.05
 Release:        %mkrel 1
 License:        GPL
 Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{realname}
-Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{realname}-%{version}.tar.bz2
-Patch0:		perl-Math-GMP-2.04-x86_64.patch
-BuildRequires:  perl-devel gmp-devel
-Requires:       perl
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+URL:            http://search.cpan.org/dist/%{module}
+Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{module}-%{version}.tar.bz2
+BuildRequires:  perl-devel
+BuildRequires:  gmp-devel
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Math::GMP was designed to be a drop-in replacement both for
@@ -21,11 +20,7 @@ for  all of its calculations, as opposed to straight Perl
 functions. This can result in speed improvements.
 
 %prep
-
-%setup -q -n %{realname}-%{version}
-%ifarch x86_64 ppc64
-%patch0 -p0
-%endif
+%setup -q -n %{module}-%{version}
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" echo | %{__perl} Makefile.PL INSTALLDIRS=vendor
