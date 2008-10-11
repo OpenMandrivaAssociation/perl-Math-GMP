@@ -2,8 +2,8 @@
 
 Summary:        High speed arbitrary size integer math
 Name:           perl-%{realname}
-Version:        2.04
-Release:        %mkrel 7
+Version:        2.05
+Release:        %mkrel 1
 License:        GPL
 Group:          Development/Perl
 URL:            http://search.cpan.org/dist/%{realname}
