@@ -1,16 +1,19 @@
-%define module Math-GMP
+%define upstream_name    Math-GMP
+%define upstream_version 2.05
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:        High speed arbitrary size integer math
-Name:           perl-%{module}
-Version:        2.05
-Release:        %mkrel 1
 License:        GPL
 Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{module}-%{version}.tar.bz2
+Url:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl-devel
 BuildRequires:  gmp-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Math::GMP was designed to be a drop-in replacement both for
@@ -20,7 +23,7 @@ for  all of its calculations, as opposed to straight Perl
 functions. This can result in speed improvements.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" echo | %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -39,4 +42,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE README
 %{perl_vendorarch}/*
 %{_mandir}/*/*
-
