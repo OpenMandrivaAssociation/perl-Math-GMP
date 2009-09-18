@@ -1,5 +1,5 @@
 %define upstream_name    Math-GMP
-%define upstream_version 2.05
+%define upstream_version 2.06
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:        High speed arbitrary size integer math
 License:        GPL
 Group:          Development/Perl
 Url:            http://search.cpan.org/dist/%{upstream_name}
-Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:  perl-devel
 BuildRequires:  gmp-devel
