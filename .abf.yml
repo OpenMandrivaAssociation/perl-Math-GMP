@@ -1,2 +1,4 @@
+removed_sources:
+  Math-GMP-2.06.tar.gz: fb2f49eed88c7f4760cb663ff8b6bcca53fe7445
 sources:
-  "Math-GMP-2.06.tar.gz": fb2f49eed88c7f4760cb663ff8b6bcca53fe7445
+  Math-GMP-2.07.tar.gz: 9e2a7f8532e2a530e0fb66a002b452a62a18d58d
