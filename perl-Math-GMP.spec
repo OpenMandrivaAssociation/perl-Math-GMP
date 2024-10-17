@@ -8,7 +8,7 @@ Release:	3
 Summary:        High speed arbitrary size integer math
 License:        GPL
 Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{upstream_name}
+Url:            https://search.cpan.org/dist/%{upstream_name}
 Source0:        ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Math/Math-GMP-%{upstream_version}.tar.gz
 
 BuildRequires:  perl-devel
